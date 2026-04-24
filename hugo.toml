@@ -1,8 +1,43 @@
 baseURL = "https://hugo-papermod-a9y.pages.dev/"
 title = "我的个人博客"
-#theme = "PaperMod"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh"
+
+# theme = "PaperMod" # 因为你目前是直接在主题源码里运行，所以这行保持注释
 
 [params]
     env = "production"
     # 首页显示文章全文还是摘要
     ShowFullTextContent = false
+    # 开启代码块右下角的复制按钮
+    ShowCodeCopyButtons = true
+    # 开启面包屑导航
+    ShowBreadCrumbs = true
+    # 显示阅读时间
+    ShowReadingTime = true
+
+[params.homeInfoParams]
+    Title = "你好，我是 Tomas 👋"
+    Content = "一名热爱技术和旅行的程序员。欢迎来到我的个人空间。"
+
+[[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/TomasYu"
+[[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/TomasYu" # 记得改成你的实际账号
+
+[[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+[[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 20
+
+[markup.highlight]
+    style = "monokai"
+    lineNos = true
