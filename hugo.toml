@@ -1,0 +1,8 @@
+baseURL = "https://hugo-papermod-a9y.pages.dev/"
+title = "我的个人博客"
+theme = "PaperMod"
+
+[params]
+    env = "production"
+    # 首页显示文章全文还是摘要
+    ShowFullTextContent = false
