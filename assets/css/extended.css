@@ -1,0 +1,5 @@
+:root {
+    --theme: #2e2e33;
+    --entry: #3b3b3f; /* 让文章卡片的颜色稍微浅一点，拉开层次 */
+    --tertiary: #adadadb3;
+}

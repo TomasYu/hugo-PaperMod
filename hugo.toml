@@ -1,32 +1,44 @@
 baseURL = "https://hugo-papermod-a9y.pages.dev/"
-title = "我的个人博客"
+title = "Tomas's Blog"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh"
 
-# theme = "PaperMod" # 因为你目前是直接在主题源码里运行，所以这行保持注释
-
 [params]
     env = "production"
-    # 首页显示文章全文还是摘要
+    # 基础功能设置
     ShowFullTextContent = false
-    # 开启代码块右下角的复制按钮
     ShowCodeCopyButtons = true
-    # 开启面包屑导航
     ShowBreadCrumbs = true
-    # 显示阅读时间
     ShowReadingTime = true
+    paginate = 5
 
-[params.homeInfoParams]
-    Title = "你好，我是 Tomas 👋"
-    Content = "一名热爱技术和旅行的程序员。欢迎来到我的个人空间。"
+    # --- 1. 个人主页模式 (Profile Mode) ---
+    # 开启后首页会有一个漂亮的大头像和简介，看起来不那么“干巴”
+    [params.profileMode]
+        enabled = true
+        title = "Tomas's Space"
+        subtitle = "专注于技术探索与生活记录"
+        displayFullDisp = true # 显示完整描述
+        imageUrl = "https://github.com/TomasYu.png" # 自动获取你的 GitHub 头像
+        imageWidth = 120
+        imageHeight = 120
+        [params.profileMode.buttons]
+            [[params.profileMode.buttons]]
+                name = "浏览文章"
+                url = "posts"
+            [[params.profileMode.buttons]]
+                name = "关于我"
+                url = "about"
 
-[[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/TomasYu"
-[[params.socialIcons]]
-    name = "twitter"
-    url = "https://twitter.com/TomasYu" # 记得改成你的实际账号
+    # --- 2. 社交图标 ---
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/TomasYu"
+    [[params.socialIcons]]
+        name = "twitter"
+        url = "https://twitter.com/TomasYu"
 
+# --- 3. 导航菜单 ---
 [[menu.main]]
     identifier = "posts"
     name = "文章"
@@ -38,6 +50,7 @@ defaultContentLanguage = "zh"
     url = "/tags/"
     weight = 20
 
+# --- 4. 代码高亮 ---
 [markup.highlight]
     style = "monokai"
     lineNos = true

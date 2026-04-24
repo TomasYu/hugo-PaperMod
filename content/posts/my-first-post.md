@@ -4,6 +4,11 @@ date: 2026-04-24
 draft: false
 tags: ["测试", "Hugo"]
 summary: "这是我用 Cloudflare 部署的第一篇文章！"
+
+cover:
+    image: "https://picsum.photos/1024/500" # 随机一张好看的图
+    alt: "Cover Image"
+    caption: "这是一张随机封面图"
 ---
 
 ## 你好，世界！
