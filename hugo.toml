@@ -1,6 +1,6 @@
 baseURL = "https://hugo-papermod-a9y.pages.dev/"
 title = "我的个人博客"
-theme = "PaperMod"
+#theme = "PaperMod"
 
 [params]
     env = "production"
